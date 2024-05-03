@@ -17,6 +17,10 @@ class Ticket(models.Model):
 	def __str__(self):
 		return str(self.name)
 
+	class Meta:
+		verbose_name = "Заявка"
+		verbose_name_plural = "Заявки"
+
 
 class News(models.Model):
 	id = models.UUIDField(
@@ -36,3 +40,7 @@ class News(models.Model):
 
 	def get_absolute_url(self):
 		return reverse_lazy("news", kwargs={"pk": self.id})
+	
+	class Meta:
+		verbose_name = "Новость"
+		verbose_name_plural = "Новости"

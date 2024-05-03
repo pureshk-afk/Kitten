@@ -161,11 +161,6 @@ MEDIA_URL = '/media/'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-# All-Auth configutation
-# https://django-allauth.readthedocs.io/en/latest/configuration.html
-SITE_ID = 1
-
-
 # Cors Headers Settings
 # https://github.com/adamchainz/django-cors-headers
 
@@ -175,14 +170,6 @@ CORS_ALLOW_ALL_ORIGINS = True
 # https://github.com/evansd/whitenoise/
 
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
-
-### DAJNGO SECURITY
-# https://docs.djangoproject.com/en/4.1/topics/security/
-
-# XFrame options
-# https://docs.djangoproject.com/en/4.1/ref/clickjacking/
-
-# X_FRAME_OPTIONS = 'SAMEORIGIN'
 
 # CSRF settings
 # https://docs.djangoproject.com/en/4.1/ref/csrf/
