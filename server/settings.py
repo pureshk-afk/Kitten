@@ -28,10 +28,9 @@ ALLOWED_HOSTS = ["*"]
 
 
 CSRF_TRUSTED_ORIGINS = [
-    "https://labofdev.ru",
     "http://kitten.labofdev.ru",
-    "http://api.localhost",
-    "http://labofdev.ru",
+    "https://kitten.labofdev.ru",
+    "http://localhost",
 ]
 
 # Application definition
