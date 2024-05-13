@@ -1,0 +1,40 @@
+header {
+  display: flex;
+  width: 100%;
+  margin-top: 26px;
+  justify-content: center;
+}
+.container-header {
+  display: flex;
+  width: 80%;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.container-header__menu {
+  display: flex;
+  gap: 54px;
+  align-items: center;
+}
+
+.btn {
+  width: 119px;
+  height: 49px;
+  border-radius: 13px;
+  border: 1px solid rgba(192, 132, 132, 1);
+  color: rgba(192, 132, 132, 1);
+  background-color: rgba(255, 202, 190, 1);
+  cursor: pointer;
+}
+
+.__links {
+  display: flex;
+  flex-direction: row;
+  gap: 47px;
+}
+
+.__links a {
+  text-decoration: none;
+  color: white;
+}

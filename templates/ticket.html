@@ -1,9 +1,35 @@
-{% extends "_base.html" %}
+{% extends "_base.html" %} {% load static %}
+<!-- prettier-ignore -->
+{% block style %}
+<link rel="stylesheet" href="{% static 'css/application.css' %}" />
+<link rel="stylesheet" href="{% static 'css/header.css' %}" />
+{% endblock style %}
 
+<!-- prettier-ignore -->
+{% block title %} News | Kitten {% endblock title %}
 {% block main %}
-ticket
-<form method="post">{% csrf_token %}
-  {{ form.as_p }}
-  <input type="submit" value="Save">
+{% include 'components/header.html' %}
+<form method="post" style="margin: 50px auto">
+  {% csrf_token %}
+  <label class="lbl">Send an applications</label>
+  <div class="__inputs">
+    <input
+      class="field"
+      id="id_name"
+      name="name"
+      type="text"
+      placeholder="Name"
+      required
+    />
+    <input
+      class="field"
+      id="id_phone"
+      name="phone"
+      type="text"
+      placeholder="Number"
+      required
+    />
+  </div>
+  <button class="btn" type="submit">Send</button>
 </form>
 {% endblock main %}

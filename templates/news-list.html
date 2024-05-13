@@ -1,5 +1,29 @@
-{% extends "_base.html" %}
+{% extends "_base.html" %} {% load static %}
+<!-- prettier-ignore -->
+{% block style %}
+<link rel="stylesheet" href="{% static 'css/news.css' %}" />
+<link rel="stylesheet" href="{% static 'css/header.css' %}" />
+{% endblock style %}
 
+<!-- prettier-ignore -->
+{% block title %} News | Kitten {% endblock title %}
 {% block main %}
-news list
+{% include 'components/header.html' %}
+<div class="posts">
+  <div class="__post">
+    <div class="title-container">
+      <h1 class="head">News of our house</h1>
+    </div>
+    <div class="main-container">
+      {% for current_news in news_list %}
+      <div class="card">
+        <div class="content">
+          <h3 class="t">{{ current_news.title }}</h3>
+          <img class="image-t" src="{{ current_news.preview.url }}" />
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</div>
 {% endblock main %}

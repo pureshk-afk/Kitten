@@ -1,5 +1,19 @@
-{% extends "_base.html" %}
+{% extends "_base.html" %} {% load static %}
+<!-- prettier-ignore -->
+{% block style %}
+<link rel="stylesheet" href="{% static 'css/header.css' %}" />
+<link rel="stylesheet" href="{% static 'css/homepage.css' %}" />
+<link rel="stylesheet" href="{% static 'css/content-left.css' %}" />
+<link rel="stylesheet" href="{% static 'css/content-right.css' %}" />
+{% endblock style %}
 
+<!-- prettier-ignore -->
+{% block title %} Home | Kitten {% endblock title %}
 {% block main %}
-  homepage
+  {% include 'components/header.html' %}
+<div class="container-home">
+  {% include 'components/content-left.html' %}
+  <!-- prettier-ignore -->
+  {% include 'components/content-right.html' %}
+</div>
 {% endblock main %}

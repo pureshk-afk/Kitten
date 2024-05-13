@@ -1,0 +1,14 @@
+{% load static %}
+<header>
+  <div class="container-header">
+    <img src="{% static 'images/Group 21.svg' %}" alt="" />
+    <div class="container-header__menu">
+      <button class="btn">Application</button>
+      <div class="__links">
+        <a href="{% url 'news-list' %}">News</a>
+        <a href="{% url 'ticket-create' %}">Ticket</a>
+        <a href="{% url 'home' %}">Home</a>
+      </div>
+    </div>
+  </div>
+</header>
