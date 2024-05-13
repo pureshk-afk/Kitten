@@ -19,12 +19,12 @@ jobs:
 
       - name: Preparing backend image
         working-directory: ./
-        run: docker build -t ${{ github.event.repository.name }}-backend -f ./Dockerfile .
+        run: docker build -t kitten -f ./Dockerfile .
 
       - name: Tagging backend image
         working-directory: ./
-        run: docker image tag ${{ github.event.repository.name }}-backend ${{ secrets.DOCKER_USERNAME }}/${{ github.event.repository.name }}-backend:latest
+        run: docker image tag kitten ${{ secrets.DOCKER_USERNAME }}/kitten:latest
 
       - name: Pushing backend image
         working-directory: ./
-        run: docker push ${{ secrets.DOCKER_USERNAME }}/${{ github.event.repository.name }}-backend:latest
+        run: docker push ${{ secrets.DOCKER_USERNAME }}/kitten:latest
