@@ -21,15 +21,17 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = env("SECRET_KEY")
 
 # SECURITY WARNING: don't run with debug turned on in production!
+# DEBUG = bool(int(env("DEBUG")))
 DEBUG = bool(int(env("DEBUG")))
 
 ALLOWED_HOSTS = ["*"]
 
 
 CSRF_TRUSTED_ORIGINS = [
+    "https://labofdev.ru",
     "http://kitten.labofdev.ru",
-    "https://kitten.labofdev.ru",
-    "http://localhost",
+    "http://api.localhost",
+    "http://labofdev.ru",
 ]
 
 # Application definition

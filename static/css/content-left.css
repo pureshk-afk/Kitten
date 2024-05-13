@@ -1,0 +1,33 @@
+.post {
+  display: flex;
+  height: 374px;
+  width: 38%;
+
+  flex-direction: column;
+  float: left;
+  align-items: start;
+  gap: 26px;
+}
+
+.big_text {
+  font-size: 86px;
+  color: white;
+}
+
+.small_text {
+  color: white;
+  font-size: 18px;
+}
+
+.group {
+  display: flex;
+  flex-direction: row;
+  gap: 26px;
+}
+
+.circle {
+  width: 16px;
+  height: 16px;
+  background-color: rgba(192, 132, 132, 1);
+  border-radius: 100%;
+}
