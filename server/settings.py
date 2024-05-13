@@ -23,12 +23,7 @@ SECRET_KEY = env("SECRET_KEY")
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = bool(int(env("DEBUG")))
 
-ALLOWED_HOSTS = [
-    "0.0.0.0",
-    "127.0.0.1",
-    "localhost",
-    "kitten.labofdev.ru",
-]
+ALLOWED_HOSTS = ["*"]
 
 
 CSRF_TRUSTED_ORIGINS = [
