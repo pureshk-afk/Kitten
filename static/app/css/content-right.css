@@ -3,6 +3,7 @@
   width: 54%;
   float: right;
   justify-content: center;
+  justify-self: center;
 }
 
 .big_c {

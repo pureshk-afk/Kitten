@@ -1,8 +1,7 @@
 .post {
   display: flex;
   height: 374px;
-  width: 38%;
-
+  width: 78%;
   flex-direction: column;
   float: left;
   align-items: start;
